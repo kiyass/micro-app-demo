@@ -6,10 +6,11 @@ function App() {
   return (
     <div className="content">
       <div>
-        <Link to="/app-1-1">app-1-1</Link>
+        <Link to="/app-1-1">app-1-1</Link>&nbsp;&nbsp;&nbsp;&nbsp;
+        <Link to="/home">home</Link>
       </div>
       <Routes>
-        <Route exact path="/" element={<div>app-1 home</div>} />
+        <Route exact path="/home" element={<div>app-1 home</div>} />
         <Route
           exact
           path={`/app-1-1/*`}
