@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "@mui/material/Button";
 import logo from "./logo.svg";
 import "./App.css";
 
@@ -46,8 +47,11 @@ function App() {
           }
         `}
       >
-        Hover to change color.
+        Emotion Button
       </div>
+      <Button variant="contained" color="primary" style={{ margin: 20 }}>
+        Mui Button
+      </Button>
     </div>
   );
 }
