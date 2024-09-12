@@ -8,7 +8,7 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
 // 👇 将渲染操作放入 mount 函数，子应用初始化时会自动执行
-window.mount = () => {
+window.onmount = () => {
   console.log("app-1", window.__MICRO_APP_BASE_ROUTE__);
   ReactDOM.render(
     <BrowserRouter basename={window.__MICRO_APP_BASE_ROUTE__ || "/"}>
@@ -19,13 +19,13 @@ window.mount = () => {
 };
 
 // 👇 将卸载操作放入 unmount 函数
-window.unmount = () => {
+window.onunmount = () => {
   ReactDOM.unmountComponentAtNode(document.getElementById("root"));
 };
 
 // 如果不在微前端环境，则直接执行mount渲染
 if (!window.__MICRO_APP_ENVIRONMENT__) {
-  window.mount();
+  window.onmount();
 }
 
 microApp.setGlobalData({ from: "app-1" });

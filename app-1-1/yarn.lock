@@ -1970,6 +1970,11 @@
     "@jridgewell/resolve-uri" "^3.1.0"
     "@jridgewell/sourcemap-codec" "^1.4.14"
 
+"@micro-zoe/micro-app@1.0.0-rc.9":
+  version "1.0.0-rc.9"
+  resolved "https://registry.npmmirror.com/@micro-zoe/micro-app/-/micro-app-1.0.0-rc.9.tgz#eeb7b079032d7554eff997a01c69ff4d7d7c9b24"
+  integrity sha512-eqhjG1jLL5UHp0tDTzz087SagPb6WZ2IsDxwklI6nDEdQPwhseVUwAa8nuQd+wzFf21YEiF+q33cxAUH1cCKAw==
+
 "@mui/core-downloads-tracker@^5.16.7":
   version "5.16.7"
   resolved "https://registry.npmmirror.com/@mui/core-downloads-tracker/-/core-downloads-tracker-5.16.7.tgz#182a325a520f7ebd75de051fceabfc0314cfd004"
