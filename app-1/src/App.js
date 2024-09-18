@@ -1,5 +1,6 @@
 import React from "react";
 import { Route, Routes, Link } from "react-router-dom";
+import microApp from "@micro-zoe/micro-app";
 import "./App.css";
 
 function App() {
@@ -8,6 +9,17 @@ function App() {
       <div>
         <Link to="/app-1-1">app-1-1</Link>&nbsp;&nbsp;&nbsp;&nbsp;
         <Link to="/home">home</Link>
+        <button
+          style={{ marginLeft: 20 }}
+          onClick={() => {
+            microApp.router.push({
+              name: "app-1-1",
+              path: "/app-1/app-1-1/test",
+            });
+          }}
+        >
+          跳转 app-1-1
+        </button>
       </div>
       <Routes>
         <Route exact path="/home" element={<div>app-1 home</div>} />
