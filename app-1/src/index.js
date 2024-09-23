@@ -8,7 +8,7 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
 // 👇 将渲染操作放入 mount 函数，子应用初始化时会自动执行
-window.onmount = () => {
+window.mount = () => {
   console.log("app-1", window.__MICRO_APP_BASE_ROUTE__);
   ReactDOM.render(
     <BrowserRouter basename={window.__MICRO_APP_BASE_ROUTE__ || "/"}>
@@ -19,17 +19,17 @@ window.onmount = () => {
 };
 
 // 👇 将卸载操作放入 unmount 函数
-window.onunmount = () => {
+window.unmount = () => {
   ReactDOM.unmountComponentAtNode(document.getElementById("root"));
 };
 
 // 如果不在微前端环境，则直接执行mount渲染
 if (!window.__MICRO_APP_ENVIRONMENT__) {
-  window.onmount();
+  window.mount();
 }
 
 microApp.setGlobalData({ from: "app-1" });
-microApp.start();
+microApp.start({ tagName: "micro-app-1" });
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
